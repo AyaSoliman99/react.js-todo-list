@@ -1,5 +1,5 @@
 import "./TodoInput.scss";
-export default function TodoInput() {
+export default function TodoInput(props) {
 return (
     <div className="card card-body my-3">
         <form>
@@ -9,7 +9,9 @@ return (
             <i className="fas fa-book" />
             </div>
         </div>
-        <input
+            <input
+            value={props.item}
+            onChange={props.handleChange}
             type="text"
             className="form-control text-capitalize"
             placeholder="add a todo item"
